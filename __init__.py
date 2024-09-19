@@ -1,5 +1,10 @@
+import os
 from cudatext import *
-import cudax_lib as apx
+# import cudax_lib as apx
+
+config_filename = os.path.join(app_path(APP_DIR_SETTINGS), 'plugins.ini')
+config_section = 'scope_description'
+config_key_lexers = 'lexers'
 
 open_bracket =  '{'
 close_bracket = '}'
@@ -8,7 +13,7 @@ multiline_comment_start = '/*'
 multiline_comment_end = '*/'
 all_bracket_symbols = open_bracket+close_bracket
 #all_bracket_symbols = apx.get_opt('bracket_symbols')
-allowed_lexers = ('C', 'C++')
+allowed_lexers = ini_read(config_filename, config_section, config_key_lexers, 'C,C++').split(',')
 
 PLUGIN_ENABLED = True
 GAP_MODE = False
@@ -20,6 +25,10 @@ _ = get_translation(__file__)  # I18N
 
 
 class Command:
+
+    def config(self):
+        ini_write(config_filename, config_section, config_key_lexers, ','.join(allowed_lexers))
+        file_open(config_filename)
     
     def __init__(self):
         self.read_colors()

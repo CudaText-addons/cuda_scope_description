@@ -1,16 +1,15 @@
 int main()
 
-
 {
-    while(1){ // qwewqe
+    while(1){ // qqq
     if(1){ // wwwwww
     
         while(2){ print("//qwe");}
             print("/*qwe*/");}
 
-        if(1) // aaa
+        if(2) // aaa
         {} 
-        if(1) // aaa
+        if(3) // aaa
         
         {} 
     } 

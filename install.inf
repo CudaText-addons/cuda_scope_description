@@ -18,3 +18,9 @@ method=toggle_on_off_cmd
 section=commands
 caption=Scope Description\Toggle mode
 method=toggle_mode_cmd
+
+[item10]
+section=commands
+caption=Scope Description\Config
+method=config
+menu=o
