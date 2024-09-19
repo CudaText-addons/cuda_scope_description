@@ -1,6 +1,6 @@
 [info]
 title=Scope Description
-desc=Shows signature of each function after the end of the function
+desc=For C-like lexers only. Shows signature of each function after the end of the function.
 type=cudatext-plugin
 subdir=cuda_scope_description
 homepage=https://github.com/cudatext-addons/cuda_scope_description
