@@ -1,5 +1,5 @@
 2024.09.19
-+ add: command "Config" and 2 options there: "lexers", "enabled"
++ add: command "Config" and options there: "lexers", "enabled", "gap_mode"
 + add: readme file
 
 2023.05.08:
