@@ -3,7 +3,12 @@ shows signature of each function below the end of the function.
 e.g. after closing bracket of the function "main" it shows text like this:
   "// end of int main(int argc, char *argv[])"
 
-works for C and C++ lexers. list of lexers is configurable so you can add other C-like lexers.
+works for C and C++ lexers.
+list of lexers is configurable so you can add other C-like lexers:
+call menu item "Options / Settings-plugins / Scope Description / Config" and edit key
+"lexers" in the file settings/plugins.ini, section "scope description". comma-separated list
+of lexer names.
+
 must be activated via menu item in the "Plugins / Scope Description" menu: "Toggle ON/OFF"
 
 supports 2 modes of display:
