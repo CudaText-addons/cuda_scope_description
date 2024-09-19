@@ -6,10 +6,11 @@ e.g. after closing bracket of the function "main" it shows text like this:
 works for C and C++ lexers.
 list of lexers is configurable so you can add other C-like lexers:
 call menu item "Options / Settings-plugins / Scope Description / Config" and edit key
-"lexers" in the file settings/plugins.ini, section "scope description". comma-separated list
+"lexers" in the file settings/plugins.ini, section "scope_description". comma-separated list
 of lexer names.
 
-must be activated via menu item in the "Plugins / Scope Description" menu: "Toggle ON/OFF"
+initial enabled-state of plugin is also the option in that file (settings/plugins.ini).
+if disabled, plugin must be activated via menu item in the "Plugins / Scope Description" menu.
 
 supports 2 modes of display:
 a) mode "using gaps" - shows signature in the inter-line gap.
