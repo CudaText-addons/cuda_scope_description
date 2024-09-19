@@ -149,6 +149,7 @@ class Command:
             #'border': True,
             'color': self.color_back,
             'font_color': self.color_font,
+            'font_name': font[0],
             'font_size': font[1] * font_scale // 120,
             'x': offset_x + cell[0],
             'y': offset_y,
