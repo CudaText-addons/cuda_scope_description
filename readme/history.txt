@@ -1,0 +1,6 @@
+2024.09.19
++ add: command "Config" and 2 options there: "lexers", "enabled"
++ add: readme file
+
+2023.05.08:
+initial release

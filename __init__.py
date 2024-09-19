@@ -5,6 +5,7 @@ from cudatext import *
 config_filename = os.path.join(app_path(APP_DIR_SETTINGS), 'plugins.ini')
 config_section = 'scope_description'
 config_key_lexers = 'lexers'
+config_key_enabled = 'enabled'
 
 open_bracket =  '{'
 close_bracket = '}'
@@ -15,7 +16,7 @@ all_bracket_symbols = open_bracket+close_bracket
 #all_bracket_symbols = apx.get_opt('bracket_symbols')
 allowed_lexers = ini_read(config_filename, config_section, config_key_lexers, 'C,C++').split(',')
 
-PLUGIN_ENABLED = True
+PLUGIN_ENABLED = ini_read(config_filename, config_section, config_key_enabled, '1')=='1'
 GAP_MODE = False
 UNIQUE_TAG = app_proc(PROC_GET_UNIQUE_TAG, '')
 PLUGIN_NAME = 'Scope Description'
@@ -28,6 +29,7 @@ class Command:
 
     def config(self):
         ini_write(config_filename, config_section, config_key_lexers, ','.join(allowed_lexers))
+        ini_write(config_filename, config_section, config_key_enabled, '1' if PLUGIN_ENABLED else '0')
         file_open(config_filename)
     
     def __init__(self):
