@@ -93,7 +93,7 @@ class Command:
         x1, y1, x2, y2 = res
         
         last_char_x = ed_self.get_line_len(y2)
-        scroll_horz = ed_self.get_prop(PROP_SCROLL_HORZ_SMOOTH)
+        scroll_horz = ed_self.get_prop(PROP_SCROLL_HORZ_INFO)['smooth_pos']
         pixels0 = ed_self.convert(CONVERT_CARET_TO_PIXELS, 0, y2)
         pixels = ed_self.convert(CONVERT_CARET_TO_PIXELS, last_char_x, y2)
         offset_x, offset_y, offset_x_gap = 0, 0, 0
